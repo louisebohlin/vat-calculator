@@ -1,5 +1,6 @@
 import React from "react"
 import { exVatToIncVat, incVatToExtVat } from "../calculations"
+import "./app.css"
 
 class App extends React.Component {
 
@@ -25,7 +26,7 @@ handleChangeInc = (e) => {
     this.setState ({
       incVat: inc,
       exVat: incVatToExtVat(this.state.vatRate, inc),
-      totalVat: parseInt(inc) - incVatToExtVat(this.state.vatRate, inc)
+      totalVat: inc - incVatToExtVat(this.state.vatRate, inc)
     }
   )
 }
@@ -43,6 +44,9 @@ handleChangeEx = (e) => {
   render() {
     return (
       <div className="App">
+        <div className="header">
+          <h1>Calculate VAT!</h1>
+        </div>
         <form>
           <div className="radiobuttons">
             <div>
@@ -100,10 +104,6 @@ handleChangeEx = (e) => {
           </div>
 
           </form>
-
-
-          <p>Example calculating ex vat for 1000kr inc vat @ 25%: {incVatToExtVat(25, 1000)}</p>
-          <p>Example calculating inc vat for 600kr ex vat @ 6%: {exVatToIncVat(6, 600)}</p>
 
       </div>
     )

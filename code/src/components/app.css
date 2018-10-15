@@ -1,0 +1,35 @@
+.header {
+  background-color: papayawhip;
+  display: flex;
+  justify-content: center;
+  margin: 0px 100px;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: lightpink;
+  margin: 0px 100px;
+  width: 100%;
+}
+
+.radiobuttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+input {
+  margin: 5px;
+}
